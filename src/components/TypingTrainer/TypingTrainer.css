@@ -1,0 +1,112 @@
+.root-TypingTrainer{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    padding: 50px;
+}
+
+.timerContainer-TypingTrainer{
+    width: 500px;
+    height: 70vh;
+    min-height: 400px;
+    max-height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(150, 150, 150);
+    padding: 20px;
+    border-radius: 20px;
+    color: rgb(25, 25, 25);
+    gap: 3vh;
+
+    & div{
+        width: 80%;
+    }
+    & .StartTyping{
+        background-color: black;
+        padding: 10px 40px;
+        color: white;
+        font-weight: 800;
+        font-size: 15px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 300ms;
+
+        &:hover{
+            transform: scale(1.02)
+        }
+    }
+    & h2{
+        font-size: 28px;
+        margin: 10px 0;
+        font-weight: 800;
+    }
+    & h3{
+        font-size: 25px;
+    }
+}
+.textContainer-TypingTrainer{
+    width: 900px;
+    height: 70vh;
+    min-height: 400px;
+    max-height: 700px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    font-size: 30px;
+    
+    flex-wrap: wrap;
+    font-weight: 600;
+    padding: 20px;
+    gap: 10px 0;
+    filter: blur(5px);
+    transition: 300ms;
+
+    & span{
+        transition: 200ms;
+        font-weight: 700;
+    }
+    & p{
+        animation-duration: 100ms;
+        animation-iteration-count: 1;
+        flex-wrap: wrap;
+    }
+}
+@keyframes shakeRootTypingTrainer{
+    0%{
+        margin-left: 2px;
+    }
+    50%{
+        margin-left: 0px;
+        margin-right: 2px;
+    }
+    90%{
+        margin-right: 0px;
+        margin-left: 1px;
+    }
+}
+@media screen and (width < 1500px) {
+    .root-TypingTrainer{
+        flex-direction: column;
+    }
+    .textContainer-TypingTrainer{
+        width: 100%;
+    }
+    .timerContainer-TypingTrainer{
+        width: calc(100% - 20px);
+        height: 200px;
+        margin-top: 10px;
+        
+        & h2{
+            font-size: 23px;
+        }
+        & h3{
+            font-size: 20px;
+        }
+    }
+}
